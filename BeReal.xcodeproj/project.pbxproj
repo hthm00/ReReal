@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E091F512B9CF409006AE7CB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CB13E51E2913A16C008F45BB /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		CB13E5202913B10B008F45BB /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		CB69974C2910F704007EDA6B /* Filmotype-Jade.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Filmotype-Jade.otf"; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 				CB73D39F290E3B4C00C12538 /* LaunchScreen.storyboard */,
 				CB73D3A2290E3B4C00C12538 /* Info.plist */,
 				CB6997472910E7E3007EDA6B /* Fonts */,
+				6E091F512B9CF409006AE7CB /* README.md */,
 			);
 			path = BeReal;
 			sourceTree = "<group>";
