@@ -2,7 +2,7 @@
 
 Submitted by: **Marvin Huynh**
 
-**BeReal.** is an app that allows a user to post their favorite photo with caption [TODO] 
+**BeReal.** is an app that allows a user to post their favorite photo with caption 
 
 Time spent: **1** hours spent in total
 
