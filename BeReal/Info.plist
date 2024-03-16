@@ -25,5 +25,9 @@
 	<array>
 		<string>Filmotype-Jade.otf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow access to camera to take picture.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please allow access to library to upload picture.</string>
 </dict>
 </plist>

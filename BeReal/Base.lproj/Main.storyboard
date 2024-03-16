@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="lab_insta_parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="BeReal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="9t9-xa-Ewl">
             <objects>
-                <viewController id="Hbv-xC-mao" customClass="SignUpViewController" customModule="lab_insta_parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hbv-xC-mao" customClass="SignUpViewController" customModule="BeReal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hnZ-u2-eVN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
         <!--BeReal.-->
         <scene sceneID="MCq-ly-0Co">
             <objects>
-                <viewController id="D49-nA-hPQ" customClass="FeedViewController" customModule="lab_insta_parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D49-nA-hPQ" customClass="FeedViewController" customModule="BeReal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VKP-Iw-p1I">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,7 +221,7 @@
                                 <rect key="frame" x="20" y="91" width="350" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="527" id="9qC-nW-7MS" customClass="PostCell" customModule="lab_insta_parse" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="527" id="9qC-nW-7MS" customClass="PostCell" customModule="BeReal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="350" height="527"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9qC-nW-7MS" id="EvC-EF-v9N">
@@ -243,23 +243,51 @@
                                                             </subviews>
                                                             <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
                                                         </stackView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G25-6h-Uyo">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOv-db-NVn">
                                                             <rect key="frame" x="0.0" y="28.333333333333343" width="350" height="350"/>
-                                                            <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G25-6h-Uyo">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                                                    <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                                </imageView>
+                                                                <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBH-aZ-Mg5" userLabel="Blur View">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PKU-GZ-OwO">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    </view>
+                                                                    <blurEffect style="regular"/>
+                                                                </visualEffectView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="G25-6h-Uyo" secondAttribute="height" multiplier="1:1" id="laZ-kO-WYe"/>
+                                                                <constraint firstAttribute="bottom" secondItem="tBH-aZ-Mg5" secondAttribute="bottom" id="Cti-UC-G23"/>
+                                                                <constraint firstAttribute="bottom" secondItem="G25-6h-Uyo" secondAttribute="bottom" id="HtP-DT-Xua"/>
+                                                                <constraint firstItem="G25-6h-Uyo" firstAttribute="leading" secondItem="mOv-db-NVn" secondAttribute="leading" id="afw-cn-Jlv"/>
+                                                                <constraint firstItem="G25-6h-Uyo" firstAttribute="top" secondItem="mOv-db-NVn" secondAttribute="top" id="hyw-xl-yFC"/>
+                                                                <constraint firstAttribute="width" secondItem="mOv-db-NVn" secondAttribute="height" multiplier="1:1" id="ijx-3L-g6k"/>
+                                                                <constraint firstItem="tBH-aZ-Mg5" firstAttribute="top" secondItem="mOv-db-NVn" secondAttribute="top" id="pLx-f8-I1h"/>
+                                                                <constraint firstAttribute="trailing" secondItem="tBH-aZ-Mg5" secondAttribute="trailing" id="pc8-WH-iJR"/>
+                                                                <constraint firstAttribute="trailing" secondItem="G25-6h-Uyo" secondAttribute="trailing" id="qzv-Oj-fuD"/>
+                                                                <constraint firstItem="tBH-aZ-Mg5" firstAttribute="leading" secondItem="mOv-db-NVn" secondAttribute="leading" id="vXZ-KH-EuP"/>
                                                             </constraints>
-                                                        </imageView>
+                                                        </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H99-cw-T4O">
                                                             <rect key="frame" x="0.0" y="386.33333333333331" width="350" height="118.66666666666669"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="What an awesome day!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5F-8W-aa3">
-                                                                    <rect key="frame" x="16" y="0.0" width="318" height="93.666666666666671"/>
+                                                                    <rect key="frame" x="16" y="0.0" width="318" height="68.666666666666671"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUP-Sn-Nbi">
+                                                                    <rect key="frame" x="16" y="76.666666666666686" width="318" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Diego" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrB-XX-YXg" userLabel="Location Label">
                                                                     <rect key="frame" x="16" y="101.66666666666669" width="318" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -279,8 +307,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="blurView" destination="tBH-aZ-Mg5" id="TtV-HK-pbJ"/>
                                             <outlet property="captionLabel" destination="w5F-8W-aa3" id="JF4-sf-jGH"/>
                                             <outlet property="dateLabel" destination="fUP-Sn-Nbi" id="ou4-Bl-xg1"/>
+                                            <outlet property="locationLabel" destination="CrB-XX-YXg" id="5VB-Zq-BK9"/>
                                             <outlet property="postImageView" destination="G25-6h-Uyo" id="ZGC-qp-QRH"/>
                                             <outlet property="usernameLabel" destination="dQG-0t-OMT" id="eyh-yc-1i3"/>
                                         </connections>
@@ -345,7 +375,7 @@
         <!--Post View Controller-->
         <scene sceneID="E77-Ui-z4h">
             <objects>
-                <viewController id="3KS-34-J8g" customClass="PostViewController" customModule="lab_insta_parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3KS-34-J8g" customClass="PostViewController" customModule="BeReal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7HF-Hn-SEO">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -404,9 +434,16 @@
                                     <action selector="onPickedImageTapped:" destination="3KS-34-J8g" id="MeY-Zk-wat"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem image="camera" catalog="system" id="40q-5u-cOT">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onTakePhotoTapped:" destination="3KS-34-J8g" id="k1u-vO-xfq"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="cameraButton" destination="40q-5u-cOT" id="jqe-8w-QDj"/>
                         <outlet property="captionTextField" destination="Amx-Rq-yFI" id="KZe-ap-adl"/>
                         <outlet property="previewImageView" destination="bNm-vL-Sfi" id="v9B-n3-J9y"/>
                         <outlet property="shareButton" destination="oL3-4g-14f" id="JwQ-tm-Iuz"/>
@@ -419,10 +456,11 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1748" y="712"/>
+            <point key="canvasLocation" x="1747.6923076923076" y="711.61137440758296"/>
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
@@ -430,16 +468,16 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.1764705882" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
